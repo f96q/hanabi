@@ -1,0 +1,44 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": ["@typescript-eslint", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {"argsIgnorePattern": "^_"}],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/explicit-function-return-type" : ["error", {"allowExpressions": true, "allowTypedFunctionExpressions": true }],
+    "import/no-default-export": "error",
+    "import/order": "error",
+    "no-restricted-syntax": [
+      "error",
+      "TSEnumDeclaration",
+      "TSInterfaceDeclaration",
+      "ForInStatement",
+      "ForOfStatement",
+      "LabeledStatement",
+      "WithStatement",
+      "VariableDeclaration[kind='let']"
+    ],
+    "prettier/prettier": [
+      "error",
+        {
+          "singleQuote": true,
+          "semi": false,
+          "printWidth": 128
+        }
+    ]
+  }
+}
